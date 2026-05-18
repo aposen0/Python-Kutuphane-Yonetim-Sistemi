@@ -112,13 +112,13 @@ class Dergi(Kaynak):
 # --- SOMUT SINIFLAR (İŞLEMLER) ---
 
 class KitapIslem(Islem):
-    kitap_sayisi = 0  # Bonus: Toplam kayıt sayısını tutmak için sınıf değişkeni
+    kitap_sayisi = 0 
 
     def __init__(self):
         self._kitaplar = []
 
     def ekle(self, kitap):
-        # Bonus: Kayıt numarası tekrar kontrolü
+
         for k in self._kitaplar:
             if k.kayit_no == kitap.kayit_no:
                 print("Hata: Bu kayıt numarası ile zaten bir kitap mevcut!")
@@ -167,7 +167,7 @@ class KitapIslem(Islem):
                 print("Hata: Belirtilen kayıt numarasına sahip kitap bulunamadı. Lütfen tekrar deneyin veya 'iptal' yazın.")
 
     def listele(self):
-        # Bonus: Listeleme boşken uyarı mesajı
+        
         if not self._kitaplar:
             print("Kayıt bulunamadı.")
             return
@@ -257,7 +257,7 @@ class Menu:
         print("="*30)
 
 
-# Ana Program Akışı
+
 if __name__ == "__main__":
     kitap_islemleri = KitapIslem()
     dergi_islemleri = DergiIslem()
